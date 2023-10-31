@@ -1,0 +1,7 @@
+<template>
+    <lightning-dynamic-icon type="trend" option={status} alternative-text={isSelected}
+        class="slds-float--right"></lightning-dynamic-icon>
+    <lightning-combobox name={key} label={label} value={value} placeholder='Choose a value'
+        options={options} onchange={handleSelect} required>
+    </lightning-combobox>
+</template>

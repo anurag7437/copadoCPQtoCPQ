@@ -1,0 +1,59 @@
+<template>
+    <article class="slds-card">
+        <lightning-spinner variant="brand" size="large" if:false={productInfoWrapper}> </lightning-spinner>
+        <div class="slds-page-header slds-p-bottom_large" lwc:if={productInfoWrapper} lwc:ref="header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="custom:custom108" title="Product Configurator"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1>
+                                        <span class="slds-page-header__title slds-truncate"
+                                            title={productInfoWrapper.configuredProduct.name}>{productInfoWrapper.configuredProduct.name}</span>
+                                    </h1>
+                                </div>
+                            </div>
+                            <p class="slds-page-header__name-meta">{productInfoWrapper.configuredProduct.code}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-grid slds-gutters slds-p-around_large" lwc:ref="body">
+            <template for:each={attributeKeyValueMap} for:item="attribute">
+                <div class="slds-col" key={attribute.key}>
+                    <span>
+                        <article class="slds-tile slds-theme_shade slds-box">
+                            <div class="slds-tile__detail">
+                                <c-select-list-component name={attribute.key} label={attribute.key}
+                                    options={attribute.value} onvalueselected={handleSelectedValue}>
+
+                                </c-select-list-component>
+                            </div>
+                        </article>
+                    </span>
+                </div>
+            </template>
+        </div>
+        <footer class="slds-card__footer slds-theme_shade" lwc:ref="footer">
+            <div if:true={showPill}>
+                <lightning-pill label="No Product found for the
+                                            combination of selected attributes." class="slds-align_absolute-center"
+                    onremove={handleRemoveOnly}>
+                    <lightning-icon icon-name="utility:warning" variant="warning" alternative-text="No Product found for the
+                                            combination of selected attributes"></lightning-icon>
+                </lightning-pill>
+            </div>
+            <ul class="slds-button-group-list slds-align_absolute-center">
+                <li>
+                    <lightning-button variant="brand" label="Save" title="Save" onclick={handleChange}
+                        class="slds-m-left_xx-large" disabled={invalidCombination}></lightning-button>
+                </li>
+            </ul>
+        </footer>
+    </article>
+</template>

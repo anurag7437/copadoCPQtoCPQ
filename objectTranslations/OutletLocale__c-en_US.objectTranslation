@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Outlet Locale</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Outlet Locales</value>
+    </caseValues>
+    <fields>
+        <label><!-- OLCountry --></label>
+        <name>OLCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- OLProduct --></label>
+        <name>OLProduct__c</name>
+        <relationshipLabel><!-- Outlet Locales --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- OLRequired --></label>
+        <name>OLRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- OLType --></label>
+        <name>OLType__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation><!-- Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disable</masterLabel>
+            <translation><!-- Disable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disable &amp; Remove</masterLabel>
+            <translation><!-- Disable &amp; Remove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enable</masterLabel>
+            <translation><!-- Enable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enable &amp; Add</masterLabel>
+            <translation><!-- Enable &amp; Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hide</masterLabel>
+            <translation><!-- Hide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hide &amp; Remove</masterLabel>
+            <translation><!-- Hide &amp; Remove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove</masterLabel>
+            <translation><!-- Remove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Show</masterLabel>
+            <translation><!-- Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Show &amp; Add</masterLabel>
+            <translation><!-- Show &amp; Add --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<html>
+             Beste {!Receiving_User.FirstName},
+             <p>
+             Bekijk deze portal voor opnieuw bestellen voor een eenvoudigere manier om herhaalorders te plaatsen bij {!Organization.Name}. U kunt uw voorgaande orders bekijken, aantallen aanpassen, nieuwe orders plaatsen en de status van orders bekijken.
+             </p>
+            <p>
+            Klik op de koppeling om de portal te openen: <a href={!Community_URL}>{!Community_Name}</a>
+            </p>
+            Met vriendelijke groet,<br>
+            {!Sending_User.Name}
+            </html>

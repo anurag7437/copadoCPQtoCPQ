@@ -1,0 +1,5 @@
+<aura:component description="CPQ External Configurator Host" implements="force:appHostable" access="global">
+    <aura:attribute name="configData" type="String" />
+    <aura:registerEvent name="configEvent" type="c:ConfigEvent" />
+    <c:externalProductConfig productConfigJson="{!v.configData}" onsaveappevent="{!c.handleConfigSave}" />
+</aura:component>
